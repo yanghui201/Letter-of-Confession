@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表白信</title>
+    <style>
+        :root {
+            --primary: #FFB6C1;  /* 柔粉色主色调 */
+            --secondary: #87CEEB;  /* 天空蓝辅助色 */
+            --accent: #FF69B4;  /* 强调色 */
+        }
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #fff5f5 0%, #ffe9e9 100%);
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+            transition: transform 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(from 180deg, var(--primary), var(--secondary), var(--accent));
+            animation: spin 20s linear infinite;
+            opacity: 0.1;
+        }
+        .image-container {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        .image-container img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.5s ease;
+        }
+        .image-container:hover img {
+            transform: scale(1.03);
+        }
+        .letter-content {
+            position: relative;
+            z-index: 1;
+        }
+        h2 {
+            color: var(--accent);
+            border-left: 4px solid var(--primary);
+            padding-left: 15px;
+            margin: 20px 0;
+        }
+        .highlight {
+            color: var(--accent);
+            font-weight: bold;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        @media (max-width: 480px) {
+            .card {
+                padding: 15px;
+            }
+            h2 {
+                font-size: 1.4em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 第一封表白信 -->
+    <div class="card">
+        <div class="image-container">
+            <img src="1.jpg" alt="骑电动车的你">
+        </div>
+        <div class="letter-content">
+            <h2>致骑着可爱电动车的你</h2>
+            <p>那天，我看到你骑着那辆贴满卡通贴纸的电动车，<span class="highlight">黑色外套在风中飘扬</span>，运动鞋踏出自信的节奏。你的存在就像一道流动的风景线，让整个街道都生动起来。</p>
+            <p>我想成为那个和你并肩骑行的人，<span class="highlight">在每个转角留下我们的笑声</span>，让生活像你车上的贴纸一样充满惊喜。期待某天，我们能一起探索更多未知的风景。</p>
+        </div>
+    </div>
+
+    <!-- 第二封表白信 -->
+    <div class="card">
+        <div class="image-container">
+            <img src="2.jpg" alt="咖啡厅里的你">
+        </div>
+        <div class="letter-content">
+            <h2>致咖啡厅里的你</h2>
+            <p>在咖啡香氤氲的午后，我注意到你穿着<span class="highlight">PUMA卫衣的侧影</span>，手机屏幕的光晕映在你专注的侧脸上。那一刻，时间仿佛静止了。</p>
+            <p>我想成为你屏幕上的另一个窗口，<span class="highlight">分享生活的点点滴滴</span>。在每个需要陪伴的时刻，都能听到彼此的心跳声。期待某天，我们能一起写下属于我们的故事。</p>
+        </div>
+    </div>
+
+    <!-- 第三封表白信 -->
+    <div class="card">
+        <div class="image-container">
+            <img src="3.jpg" alt="镜子前的你">
+        </div>
+        <div class="letter-content">
+            <h2>致镜子前的你</h2>
+            <p>当霓虹灯映照在你的<span class="highlight">红色背包上</span>，我看到的是一个充满故事的背影。你整理头发的样子，让整个空间都变得温柔起来。</p>
+            <p>我想成为你背包里的那本书，<span class="highlight">记录我们共同经历的时光</span>。在每个需要依靠的时刻，都能感受到彼此的温度。期待某天，我们能一起写下属于我们的诗篇。</p>
+        </div>
+    </div>
+</body>
+</html>
